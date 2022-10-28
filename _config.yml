@@ -81,8 +81,8 @@ analytics:
 # Site Author
 author:
   name             : "Carson Stacy"
-  avatar           : "profile.png"
-  bio              : "Graduate Student at UofA, find me between the purines and pyrmidines."
+  avatar           : "files/profile_pic.png"
+  bio              : "Graduate Student at the University of Arkansas, find me between the purines and pyrimidines."
   location         : "Fayetteville, AR"
   employer         : "University of Arkansas"
   googlescholar    : #"http://yourfullgooglescholarurl.com"
