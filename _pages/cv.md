@@ -11,30 +11,40 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Anthropology, University of Arkansas, 2017
+* M.S. in Statistics and Analytics, University of Arkansas, 2024 (expected)
+* Ph.D in Cell and Molecular Biology, University of Arkansas, 2025 (expected)
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2020 - Present: Graduate Research Assistant
+  * University of Arkansas
+  * Duties included: RNA-seq and CRISPR knockout data analysis. Mentoring undergraduate students.
+  * Supervisor: Professor Jeff Lewis
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 2019: Laboratory Technician
+  * University of Arkansas
+  * Duties included: Growth rate quantification analysis, FPLC operation.
+
+* 2017-2018: Peace Corps Volunteer
+  * Kolahun, Liberia
+  * Duties included: Secondary level Chemistry instructor. Leading advocacy and STEM education workshops.
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Statistical Analysis
+  * Survival Analysis
+  * Experimental Design
+  * Power Analysis
+  * Bayesian Inference
+* Bioinformatics
+  * Unix/Bash
+  * Differential Expression Analysis
+  * CRISPR
+  * R
+  * Python
+  * Nextflow
+* Teaching
 
 Publications
 ======
@@ -56,4 +66,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Graduate and Professional Student Congress Representative for Cell and Molecular Biology (2022-present)
