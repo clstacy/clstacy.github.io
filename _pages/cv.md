@@ -67,3 +67,4 @@ Teaching
 Service and leadership
 ======
 * Graduate and Professional Student Congress Representative for Cell and Molecular Biology (2022-present)
+* Graduate and Professional Student Congress Facilities Committee Chair (2023-present)
