@@ -27,7 +27,9 @@ Notice the data is in tidy format, if your research was recorded like most lab e
 
 Here is the code I use to create a quick dotplot:
 ```
-ggplot(df, aes(x = group, y = value)) + # these are column names of my dataset
+library(ggplot2)
+
+my_plot <- ggplot(df, aes(x = group, y = value)) + # these are column names of my dataset
   geom_dotplot(
     binaxis = "y", # this is probably what you want
     stackdir = "center", # for symmetry
@@ -51,7 +53,32 @@ ggplot(df, aes(x = group, y = value)) + # these are column names of my dataset
        x = "Treatment", # label the x axis
        y = "Value") + # label the y axis
   theme_classic() # a ggplot theme
+  
+my_plot
 ```
 ![template dotplot](https://github.com/clstacy/clstacy.github.io/blob/master/images/example_dotplot.png?raw=true)
 
 And there we have it! This can be modified to get what you need, but I hope it is helpful for scientists wanting to visualize their data.
+
+That's a great baseline for getting a feel for how the data looks, but you'll likely want to test for significance for any differences that you might see. 
+
+Testing for significance
+------
+
+Fortunately, we can within the ggplot ecosystem test for differences. The code I use to do so is below. I start with the my_plot we made in the code above.
+
+```
+library(ggpubr)
+
+my_plot +
+  ggpubr::stat_compare_means(comparisons =
+                               list(c("A", "B"),
+                                    c("B", "C"),
+                                    c("A", "C")),
+                             method = "t.test",
+                             label = "p.signif") + # "p.format" if you want the actual p-value.
+                             ggpubr::stat_compare_means(label.y = min(df$value), method = "anova") # add ANOVA p-value.
+```
+![template dotplot](https://github.com/clstacy/clstacy.github.io/blob/master/images/example_dotplot_comparisons.png?raw=true)
+
+And there we have it!
