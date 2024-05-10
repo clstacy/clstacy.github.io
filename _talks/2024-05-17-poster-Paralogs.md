@@ -2,7 +2,6 @@
 title: "Welcome to Paralogs: Visualizing Gene Expression with Precision"
 collection: talks
 type: "Conference proceedings poster"
-permalink: /talks/2024-05-17-poster-Paralogs
 venue: "KU Center for Genomics 2014 Annual Symposium"
 date: 2024-05-17
 location: "Lawrence, KS"
