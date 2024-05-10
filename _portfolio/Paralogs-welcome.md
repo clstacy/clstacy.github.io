@@ -4,8 +4,4 @@ excerpt: "An R Package for Visualizing Differential Paralog Expression in KEGG G
 collection: portfolio
 ---
 
-To use *Paralogs*, go to visit the [GitHub repository](https://github.com/clstacy/Paralogs).
 
-## Research Poster
-
-\[insert image here\]
