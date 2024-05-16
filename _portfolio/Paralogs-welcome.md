@@ -5,7 +5,7 @@ collection: portfolio
 ---
 
 
-Thank you for scanning the QR code from my poster, or if you've found your way here through other means, welcome! I'm excited to share more about *paralogs*, an innovative R package I've developed that enhances the analysis of gene expression data by visualizing on paralog-specific responses in KEGG pathways. The original poster is accessible [here](clstacy.github.io/talks/2024-05-17-poster-Paralogs/) If you're interested in the technical details or want to try it out yourself, please visit the [GitHub repository](https://github.com/clstacy/Paralogs).
+Thank you for scanning the QR code from my poster, or if you've found your way here through other means, welcome! I'm excited to share more about *paralogs*, an innovative R package I've developed that enhances the analysis of gene expression data by visualizing on paralog-specific responses in KEGG pathways. The original poster is accessible [here](https://github.com/clstacy/clstacy.github.io/blob/master/files/Stacy_Paralogs_Poster_2024.pdf) If you're interested in the technical details or want to try it out yourself, please visit the [GitHub repository](https://github.com/clstacy/Paralogs).
 
 ## Why Paralogs?
 
