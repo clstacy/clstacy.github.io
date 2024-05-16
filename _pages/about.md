@@ -12,6 +12,9 @@ Welcome to my corner of the internet. I like solving challenging problems at the
 
 Check out some of my more recent work
 ======
+
+A new R package for visualizing paralog gene expression within KEGG pathways. Details available [here](https://clstacy.github.io/Paralogs)
+
 A searchable database of doubling times of haploid lab yeast knock-out strains is available [here](https://clstacy.github.io/yeastKODoublingTimes/). 
 
 Feel free to check out my updated Python 3 implementation of the MULTIPOOL mapping software [here](https://github.com/clstacy/multipool) for BSA analyses.
