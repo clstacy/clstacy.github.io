@@ -21,13 +21,6 @@ Traditional KEGG visualization often averages or takes the largest effect in the
 
 Using *Paralogs* in a study on *Saccharomyces cerevisiae*, we could identify unique gene expression patterns under different stress conditions. This application demonstrated how our package can uncover crucial insights into metabolic pathways, such as glycolysis and the Krebs cycle, which are often overlooked by existing methods.
 
-## Screenshots and Tutorials
-
-Below are some screenshots of the "Paralogs" interface in action:
-![Paralogs Visualization Example](https://example.com/screenshot1.png)
-
-For those interested in seeing *Paralogs* at work, check out our [step-by-step tutorial](https://example.com/tutorial).
-
 ## Your Feedback and Contributions
 
 I am continually striving to improve "Paralogs" and eagerly welcome feedback and contributions from the community. Whether you're a fellow researcher, a potential collaborator, or an employer, I value your insights and invite you to join me in enhancing this tool.
@@ -36,7 +29,7 @@ I am continually striving to improve "Paralogs" and eagerly welcome feedback and
 
 "Paralogs" is more than just an R package—it's a new way of looking at genomic data. By providing detailed, paralog-specific expression analysis, it opens up new possibilities for understanding gene function and regulation. I'm thrilled to see how it will advance our knowledge in the field of genomics.
 
-For further details, visit the [GitHub repository](https://github.com/clstacy/Paralogs) or reach out directly via [LinkedIn](https://linkedin.com/in/UPDATEME).
+For further details, visit the [GitHub repository](https://github.com/clstacy/Paralogs) or reach out directly via [LinkedIn](https://www.linkedin.com/in/carson-stacy).
 
 Thank you for your interest, and I look forward to your feedback and questions!
 
