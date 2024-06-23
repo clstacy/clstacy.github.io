@@ -1,5 +1,5 @@
 ---
-title: "Quantifying relative virulence: when $\mu$ max fails and AUC alone just is not enough"
+title: "Quantifying relative virulence: when $\\mu$ max fails and AUC alone just is not enough"
 collection: publications
 permalink: /publication/2021-11-05-relative-virulence
 excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
