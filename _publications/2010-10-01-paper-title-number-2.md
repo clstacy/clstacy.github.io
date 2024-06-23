@@ -1,15 +1,15 @@
 ---
-title: "Paper Title Number 2"
+title: "Quantifying relative virulence: when $\mu$ max fails and AUC alone just is not enough"
 collection: publications
-permalink: /publication/2010-10-01-paper-title-number-2
+permalink: /publication/2021-11-05-relative-virulence
 excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-date: 2010-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+date: 2021-11-05
+venue: 'Journal of General Virology'
+paperurl: '[https://doi.org/10.1099/jgv.0.001515](https://doi.org/10.1099/jgv.0.001515'
+citation: 'Ceballos, Ruben Michael, and Carson Len Stacy. "Quantifying relative virulence: when μ max fails and AUC alone just is not enough." Journal of General Virology 102, no. 1 (2021): 001515.'
 ---
-This paper is about the number 2. The number 3 is left for future work.
+This paper is about a temporally weighted metric of differences in growth inhibition resulting from viral infection in microbial populations.
 
-[Download paper here](http://academicpages.github.io/files/paper2.pdf)
+[Download paper here](https://doi.org/10.1099/jgv.0.001515)
 
-Recommended citation: Your Name, You. (2010). "Paper Title Number 2." <i>Journal 1</i>. 1(2).
+Recommended citation: Ceballos, Ruben Michael, and Carson Len Stacy. "Quantifying relative virulence: when μ max fails and AUC alone just is not enough." Journal of General Virology 102, no. 1 (2021): 001515.
