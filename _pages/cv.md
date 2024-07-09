@@ -45,8 +45,10 @@ Skills
 Projects
 ======
 * **Statistical Analysis of Yeast Stress Response** (2024)
-  * Developed an ordinal regression model to analyze yeast growth responses under stress, leading to article publication and facilitating subsequent analysis of a statistically grounded estimand.
+  * Developed an ordinal regression model to analyze yeast growth responses under stress, leading to article [publication](https://doi.org/10.1186/s12915-024-01945-7) and facilitating subsequent analysis of a statistically grounded estimand.
 * **Genomic Data Analysis Course Development** (2023)
+  * Created course exercises for a semester course on analysis of genomic data
+  * An online text repository of the exercises is available [here](clstacy.github.io/GenomicDataAnalysis)
 
 
 Publications
@@ -62,18 +64,20 @@ Teaching
   {% endfor %}</ul>
 
 
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+
   
 Service and leadership
 ======
-* Graduate and Professional Student Congress Representative for Cell and Molecular Biology (Spring 2022- Fall 2024)
+* Graduate and Professional Student Congress Representative for Cell and Molecular Biology (Spring 2022 - Fall 2024)
 * Facilities Committee Chair (Spring 2023 - Fall 2024)
 
 Professional Affiliations
 ======
 * American Statistical Association member
-* \phi \beta \kappa honors society member
+* Phi Beta Kappa honors society member
+
+#<! -- Talks
+# ======
+#  <ul>{% for post in site.talks %}
+#    {% include archive-single-talk-cv.html %}
+#  {% endfor %}</ul> --> 
