@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* M.S. in Statistics and Analytics, University of Arkansas, December 2024 (expected)
+* Masters of Science in Statistics and Analytics, University of Arkansas, December 2024 (expected)
 * Ph.D. in Cell and Molecular Biology, University of Arkansas, May 2025 (expected)
-* B.S. in Anthropology, University of Arkansas, May 2017
+* Bachelors of Science in Anthropology, University of Arkansas, May 2017
 
 Work experience
 ======
@@ -62,8 +62,6 @@ Teaching
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-
-
 
   
 Service and leadership
