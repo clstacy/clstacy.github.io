@@ -8,9 +8,6 @@ date: 2022-08-20
 location: "Fayetteville, AR"
 ---
 
-Teaching Assistant - Human Physiology Lab
-======
-
 From August 2022 to December 2023, I served as a Teaching Assistant for the Principles of Biology Lab, where I played a crucial role in guiding students through foundational biological concepts and laboratory techniques. 
 My responsibilities spanned a range of instructional and support activities aimed at creating a dynamic and effective learning environment.
 
