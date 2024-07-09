@@ -6,16 +6,7 @@ excerpt: 'In this paper, I quantified differential viral pathogen loads as deter
 date: 2020-07-14
 venue: 'Frontiers in Microbiology'
 paperurl: 'https://doi.org/10.3389/fmicb.2020.01218'
-citation: '@article{ceballos2020host,
-  title={Host-dependent differences in replication strategy of the Sulfolobus spindle-shaped virus strain SSV9 (aka, SSVK1): infection profiles in hosts of the family Sulfolobaceae},
-  author={Ceballos, Ruben Michael and Drummond, Coyne Gareth and Stacy, Carson Len and Padilla-Crespo, Elizabeth and Stedman, Kenneth Mark},
-  journal={Frontiers in Microbiology},
-  volume={11},
-  pages={1218},
-  year={2020},
-  publisher={Frontiers Media SA}
-}
-'
+citation: 'Ceballos, Ruben Michael, Coyne Gareth Drummond, Carson Len Stacy, Elizabeth Padilla-Crespo, and Kenneth Mark Stedman. "Host-dependent differences in replication strategy of the Sulfolobus spindle-shaped virus strain SSV9 (aka, SSVK1): infection profiles in hosts of the family Sulfolobaceae." Frontiers in Microbiology 11 (2020): 1218.'
 ---
 In this paper, I quantified differential viral pathogen loads as determined by ESI/MS spectra assays and modelled inferred infection dynamics.
 
