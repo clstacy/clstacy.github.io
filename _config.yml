@@ -82,10 +82,10 @@ analytics:
 author:
   name             : "Carson Stacy"
   avatar           : "profile_pic.png"
-  bio              : "Graduate Student at the University of Arkansas, find me between the purines and pyrimidines."
+  bio              : "Graduate Student at the University of Arkansas | Applied Statistician | Practical Solutions Through Precise Analysis."
   location         : "Fayetteville, AR"
   employer         : "University of Arkansas"
-  googlescholar    : #"http://yourfullgooglescholarurl.com"
+  googlescholar    : "https://scholar.google.com/citations?user=zdeq1mYAAAAJ&hl=en"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
