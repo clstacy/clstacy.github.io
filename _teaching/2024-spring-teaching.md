@@ -8,8 +8,6 @@ date: 2024-01-01
 location: "Fayetteville, AR"
 ---
 
-Teaching Assistant - Human Physiology Lab
-======
 
 As a Teaching Assistant for the Human Physiology Lab, I played a pivotal role in enhancing students' understanding of complex physiological concepts through hands-on learning and interactive instruction.
 My responsibilities encompassed a range of tasks designed to support both students and faculty, ensuring a comprehensive and effective learning experience.
