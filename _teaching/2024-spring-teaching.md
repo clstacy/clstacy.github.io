@@ -22,7 +22,7 @@ Key Responsibilities:
 
 Teaching Approach:
 =====
-I utilized student-centered learning approaches, drawing on techniques I acquired during my Peace Corps training. These modern teaching methods emphasized active student participation, critical thinking, and practical application of knowledge.
+I utilized student-centered learning approaches, drawing on techniques that I acquired during my Peace Corps training. These modern teaching methods emphasized active student participation, critical thinking, and practical application of knowledge.
 
 Notable Achievements:
 =====
