@@ -9,14 +9,12 @@ redirect_from:
 
 {% include base_path %}
 
-
 # **Carson Stacy**
 
 **Ph.D. Candidate – Cell & Molecular Biology** | **M.S. Student – Statistics**  
 University of Arkansas, Fayetteville, AR  
 
-E: contact@xxxxx.com  
-T: (xxx) xxx-xxxx  
+Email: contact@carsonstacy.com  
 Springdale, AR  
 [https://clstacy.github.io](https://clstacy.github.io)
 
