@@ -19,12 +19,11 @@ Beyond my research, I’m dedicated to **teaching** and **mentorship**. I’ve d
 
 If you’re interested in learning more about my work, feel free to explore the other sections of my website:
 
-- **[Publications](#)** – My scholarly papers and articles  
-- **[Talks](#)** – Conference presentations and seminars  
-- **[Teaching](#)** – Courses I’ve assisted with and the materials I’ve developed  
-- **[Portfolio](#)** – Highlights of my recent software and analysis projects  
-- **[Blog Posts](#)** – Occasional musings on stats, bioinformatics, and more  
-- **[CV](#)** – A detailed overview of my background, experiences, and skills  
+- **[Publications](https://clstacy.github.io/publications)** – My scholarly papers and articles  
+- **[Talks](https://clstacy.github.io/talks)** – Conference presentations and seminars  
+- **[Teaching](https://clstacy.github.io/teaching)** – Courses I’ve assisted with and the materials I’ve developed  
+- **[Portfolio](https://clstacy.github.io/portfolio)** – Highlights of my recent software and analysis projects  
+- **[Blog Posts](https://clstacy.github.io/year-archive)** – Occasional musings on stats, bioinformatics, and more  
+- **[CV](https://clstacy.github.io/talks)** – A detailed overview of my background, experiences, and skills  
 
-Feel free to connect with me on [LinkedIn](#), or see more of my work on [GitHub](#), [Google Scholar](#), or [ORCID](#). Thanks for stopping by!
-
+Feel free to connect with me on [LinkedIn](www.linkedin.com/in/carson-stacy), or see more of my work on [GitHub](https://www.github.com/clstacy), [Google Scholar](https://scholar.google.com/citations?user=zdeq1mYAAAAJ&hl=en&oi=ao), or [ORCID](https://orcid.org/0000-0002-8817-574X). Thanks for stopping by!
