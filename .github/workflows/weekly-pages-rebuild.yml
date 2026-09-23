@@ -1,0 +1,23 @@
+# GitHub Pages (deploy-from-branch) only rebuilds on push, so posts with a
+# future date never appear on their own. This requests a Pages build every
+# Wednesday morning so scheduled posts go live without a new commit.
+# Run it manually once from the Actions tab to confirm the token has access.
+name: Weekly Pages rebuild
+
+on:
+  schedule:
+    - cron: "15 8 * * 3"   # Wednesdays 08:15 UTC (09:15 Dublin in winter, 09:15 IST in summer)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request a Pages build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
