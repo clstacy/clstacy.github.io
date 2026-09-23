@@ -47,13 +47,15 @@ I develop and apply statistical models and machine-learning methods to make sens
 
 ---
 
-## Publications
+## Publications  
 
-**Accepted**
+**Journal articles**  
+
+Jordan, A., Caffrey, A., **Stacy, C.**, Huang, R. Y., Tan, T. Z., McCabe, A., Dean, K., Das, S., & Perry, A. S. (2026). Genome-wide assessment of DNA methylation fidelity identifies representative ovarian cancer cell line models. *Journal of Cellular and Molecular Medicine*, 30(16), e71334.
+
+VanDyke, L., Mantooth, R., **Stacy, C. L.**, Robinson, S., Fischer, P., Mosley, C., Beauford, H., & Jensen, H. (2026). Bicycle-related trauma trends in a region of expanding cycling infrastructure. *The American Surgeon*, 92(6), 1630–1636.
 
 Sauer, E. L.<sup>†</sup>, **Stacy, C. L.**<sup>†</sup>, Perrine, W., Love, A. C., Lewis, J. A., & DuRant, S. E. (2025). Diet driven differences in host tolerance are linked to shifts in global gene expression in a common avian host-pathogen system. *Molecular Ecology*, 34(12), e17793. <sup>†</sup>Co-first author.
-
-VanDyke, L., Mantooth, R., **Stacy, C. L.**, Robinson, S., Fischer, P., Mosley, C., Beauford, H. and Jensen, H., 2025. Bicycle-Related Trauma Trends in a Region of Expanding Cycling Infrastructure. *The American Surgeon*.
 
 Scholes, A. N., Stuecker, T. N., Hood, S. E., Locke, C. J., **Stacy, C. L.**, Zhang, Q., & Lewis, J. A. (2024). Natural variation in yeast reveals multiple paths for acquiring higher stress resistance. *BMC Biology*, 22(1), 149.
 
@@ -63,27 +65,33 @@ Ceballos, R. M., & **Stacy, C. L.** (2021). Quantifying relative virulence: when
 
 Ceballos, R. M., Drummond, C. G., **Stacy, C. L.**, Padilla-Crespo, E., & Stedman, K. M. (2020). Host-dependent differences in replication strategy of the *Sulfolobus* spindle-shaped virus strain SSV9 (aka, SSVK1). *Frontiers in Microbiology*, 11, 1218.
 
-**Submitted**
+**Preprints**  
 
-**Stacy, C. L.**, Lenaduwe, S. L., Stuecker, T. N., Lewis, J. A. Biologically Scaled Thresholds from Proportional Odds Models Enhance Ordinal Phenotype Analysis. *mSystems*, under review.
+**Stacy, C. L.**, Scholes, A. N., Stuecker, T. N., Hood, S. E., Crook, C. C., Espana-Pena, M., Paré, A. C., & Lewis, J. A. (2025). Surprising regulatory plasticity for the conserved HOG pathway in diverse *Saccharomyces cerevisiae* strains. *bioRxiv*. doi:10.64898/2025.12.28.696518
 
-**In Preparation**
+**Stacy, C. L.**, Lenaduwe, S., Stuecker, T. N., & Lewis, J. A. (2025). MIC*: A framework for interpretable analysis of ordinal viability data. *bioRxiv*. doi:10.1101/2025.10.13.682067. Under review.
 
-**Stacy, C. L.**, Scholes, A. N., Stuecker, T. N., Hood, S. E., Crook, C. C., Espana-Pena, M., Pitts, L. J., Pare, A. C., Lewis, J. A. Not just Salt: Novel Functions of Hog1 MAPK Revealed through Stress Response Transcriptomics of Wild *Saccharomyces cerevisiae*.
+**In Preparation**  
 
-**Stacy, C. L.**, Hood, S.E., Stuecker, T. N., Sadhu, M. J., Lewis, J. A. A Plasmid-Based CRISPR Screen Identifies Novel Pan-Genomic Loci Conferring Strain-Specific Resistance to Osmotic Stress.
+**Stacy, C. L.**, Hood, S. E., Stuecker, T. N., Sadhu, M. J., & Lewis, J. A. A plasmid-based CRISPR screen identifies novel pan-genomic loci conferring strain-specific resistance to osmotic stress.
 
 ---
 
-## Conferences
+## Conferences and Posters  
 
-**Stacy, C. L.**, & Lewis, J. A. (2025). Interpretable Ordinal Analysis for Complex Designs in Cell and Molecular Biology. *Joint Statistical Meetings*, Nashville, TN.
+**Stacy, C. L.**, & Das, S. (2026). AI in medicine: improving cancer diagnosis. Poster, *European Researchers' Night 2026*, RCSI, Dublin, Ireland.
 
-Zhao, K., **Stacy, C. L.**, Islam, M. A., Robinson, S. E., Jensen, H. (2025). Mental Health, Psychotherapeutics, and Breast Cancer. *Arkansas Chapter of the American College of Physicians Conference*, Little Rock, AR.
+**Stacy, C. L.**, & Das, S. (2026). Post-hoc Bayesian uncertainty for a deployed tumour classifier: calibration and out-of-distribution detection under platform shift. Poster, *Machine Learning Summer School (MLSS 2026)*, Max Planck Institute for Intelligent Systems, Tübingen, Germany.
 
-**Stacy, C. L.**, & Lewis, J. A. (2024). Paralogs: An R Package for Visualizing Differential Expression of Paralogs in KEGG Pathways. *KU Center for Genomics Annual Symposium*, Lawrence, KS.
+**Stacy, C. L.**, & Das, S. (2026). Precisely wrong: conformal prediction for honest precision oncology. Poster, *Machine Learning Summer School on Reliability & Safety (MLSS^R&S 2026)*, Jagiellonian University, Kraków, Poland.
 
-**Stacy, C. L.**, Lee, D. E., Brown, J. L., Rosa, M. E., Henry, J. N., Brown, L. A., Perry, R. E. Jr., Washington, T. A., & Greene, N. P. (2014). Effect of Lifestyle Physical Activity and Western Diet on Genes Controlling Mitochondrial Translation. *International Journal of Exercise Science: Conference Proceedings*, 11(2).
+**Stacy, C. L.**, & Lewis, J. A. (2025). Interpretable ordinal analysis for complex designs in cell and molecular biology. Poster, *Joint Statistical Meetings*, Nashville, TN.
+
+Zhao, K., **Stacy, C. L.**, Islam, M. A., Robinson, S. E., & Jensen, H. (2025). Mental health, psychotherapeutics, and breast cancer. *Arkansas Chapter of the American College of Physicians Conference*, Little Rock, AR.
+
+**Stacy, C. L.**, & Lewis, J. A. (2024). Paralogs: an R package for visualizing differential expression of paralogs in KEGG pathways. Poster, *KU Center for Genomics Annual Symposium*, Lawrence, KS.
+
+**Stacy, C. L.**, Lee, D. E., Brown, J. L., Rosa, M. E., Henry, J. N., Brown, L. A., Perry, R. E. Jr., Washington, T. A., & Greene, N. P. (2014). Effect of lifestyle physical activity and Western diet on genes controlling mitochondrial translation. *International Journal of Exercise Science: Conference Proceedings*, 11(2).
 
 ---
 
