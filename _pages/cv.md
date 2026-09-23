@@ -9,15 +9,15 @@ redirect_from:
 
 {% include base_path %}
 
-**Postdoctoral Research Fellow** | Royal College of Surgeons in Ireland, Dublin
+**Postdoctoral Research Fellow** | Royal College of Surgeons in Ireland, Dublin  
 [clstacy.github.io](https://clstacy.github.io) | [orcid.org/0000-0002-8817-574X](https://orcid.org/0000-0002-8817-574X) | [linkedin.com/in/carson-stacy](https://linkedin.com/in/carson-stacy)
 
 ---
 
 ## Professional Experience
 
-**Postdoctoral Research Fellow** — Jan 2026 – Present
-Royal College of Surgeons in Ireland (RCSI), Dublin, Ireland
+**Postdoctoral Research Fellow** — Jan 2026 – Present  
+Royal College of Surgeons in Ireland (RCSI), Dublin, Ireland  
 *School of Pharmacy & Biomolecular Sciences, Das Lab*
 
 - Develop and validate DNA methylation-based machine-learning classifiers for rare sinonasal tumors, including metastasis prediction.
@@ -28,15 +28,15 @@ Royal College of Surgeons in Ireland (RCSI), Dublin, Ireland
 
 ## Education
 
-**Ph.D. in Cell and Molecular Biology** — University of Arkansas, December 2025
-Concentration: Bioinformatics | GPA 4.0/4.0
+**Ph.D. in Cell and Molecular Biology** — University of Arkansas, December 2025  
+Concentration: Bioinformatics | GPA 4.0/4.0  
 *Dissertation: Phenotypic Association of Pan-Genomic Transcriptional Signatures Reveal Genomic Determinants of Natural Variation in Stress Response and Survival. Advisor: Jeffrey Lewis.*
 
-**M.S. in Statistics and Analytics** — University of Arkansas, May 2025
-Concentration: Statistics | GPA 3.9/4.0
+**M.S. in Statistics and Analytics** — University of Arkansas, May 2025  
+Concentration: Statistics | GPA 3.9/4.0  
 *Thesis: Application of Ordinal Regression Models to Acquired Stress Resistance in Wild Strains of Saccharomyces cerevisiae. Advisor: Qingyang Zhang.*
 
-**B.S. in Anthropology** — University of Arkansas, May 2017
+**B.S. in Anthropology** — University of Arkansas, May 2017  
 Minor: Biological Sciences | GPA 4.0/4.0
 
 ---
@@ -89,19 +89,19 @@ Zhao, K., **Stacy, C. L.**, Islam, M. A., Robinson, S. E., Jensen, H. (2025). Me
 
 ## Teaching Experience
 
-**Teaching Assistant** — Genomic Data Analysis (Graduate), University of Arkansas — Sp 2023 – Sp 2025
+**Teaching Assistant** — Genomic Data Analysis (Graduate), University of Arkansas — Sp 2023 – Sp 2025  
 Co-developed and TA'd a graduate-level bioinformatics course covering high-throughput sequencing analysis. [Course materials](https://clstacy.github.io/GenomicDataAnalysis)
 
-**Teaching Assistant** — Human Physiology Laboratory (Undergraduate), University of Arkansas — Sp 2024 – Fa 2024
+**Teaching Assistant** — Human Physiology Laboratory (Undergraduate), University of Arkansas — Sp 2024 – Fa 2024  
 Instructed weekly lab sessions and developed an R Shiny automated grading calculator to reduce TA workload.
 
-**Teaching Assistant** — Principles of Biology Laboratory (Undergraduate), University of Arkansas — Fa 2022 – Sp 2023
+**Teaching Assistant** — Principles of Biology Laboratory (Undergraduate), University of Arkansas — Fa 2022 – Sp 2023  
 Led foundational biology labs for non-science majors. Average student evaluation score ~4.8/5.
 
-**General Chemistry Teacher (Peace Corps Volunteer)** — Kolahun High School, Liberia — May 2017 – Sept 2018
+**General Chemistry Teacher (Peace Corps Volunteer)** — Kolahun High School, Liberia — May 2017 – Sept 2018  
 Taught chemistry to grades 10–12 in a resource-limited setting. Developed culturally responsive curriculum, improved national exam pass rates, co-led the Girls Club of Kolahun, and served on the Gender Equity Committee.
 
-**Supplemental Instruction Leader** — Honors General Chemistry, University of Arkansas — Sp 2015 – Sp 2017
+**Supplemental Instruction Leader** — Honors General Chemistry, University of Arkansas — Sp 2015 – Sp 2017  
 Facilitated peer-led review sessions, trained new SI leaders, and developed active learning workshops.
 
 ---
@@ -119,17 +119,17 @@ Facilitated peer-led review sessions, trained new SI leaders, and developed acti
 
 ## Skills
 
-**Programming & Software**
-R (tidyverse, Shiny, tidymodels), Python (pandas, NumPy, Keras, scikit-learn), Unix/Bash, Nextflow (Groovy), Git/GitHub, SLURM/PBS
+**Programming & Software**  
+R (tidyverse, Shiny, tidymodels), Python (pandas, NumPy, Keras, scikit-learn), Unix/Bash, Nextflow (Groovy), Git/GitHub, SLURM/PBS  
 *Familiar: SQL, SAS, TensorFlow, PyTorch, JavaScript*
 
-**Bioinformatics**
+**Bioinformatics**  
 Bulk RNA-seq, CRISPR screen design & analysis, NGS pipeline development (short & long read), DNA methylation analysis, scRNA-seq, scATAC-seq, flow cytometry, mass spectrometry proteomics
 
-**Statistics & Machine Learning**
+**Statistics & Machine Learning**  
 Ordinal & multinomial regression, regularized regression, random forest, Bayesian hierarchical modeling, MCMC, experimental design & power analysis
 
-**Computing**
+**Computing**  
 HPC (SLURM & PBS), reproducible research (R Markdown, Quarto, Nextflow CI/CD), data visualization (ggplot2)
 
 ---
