@@ -68,7 +68,7 @@ The rest of the post covers the merging itself: why you adapter-trim but don't q
 
 **Short**
 
-BBMerge can tell you which adapters are in a library from the reads alone (outa flag; it recovered the exact TruSeq sequences on my demo). New post on merging pairs, choosing strictness, and checking for wrong merges against known truth: 0 of 11,461. https://clstacy.github.io/posts/2026/10/bbmerge-guide/
+BBMerge can tell you which adapters are in a library from the reads alone (outa; it recovered the exact TruSeq sequences on my demo). New post on merging pairs, choosing strictness, and checking wrong merges against truth: 0 of 11,461. https://clstacy.github.io/posts/2026/10/bbmerge-guide/
 
 ---
 
@@ -188,3 +188,69 @@ Last post in the series: how the bootstrap estimates optimism, why "the entire p
 **Short**
 
 Split 70/30, record the AUC, repeat with a different split. It moves by a tenth of a point. A single test set is a noisy draw, not validation. Why the optimism-corrected bootstrap is the better default, last in the series: https://clstacy.github.io/posts/2026/11/one-test-set-is-not-validation/
+
+---
+
+## Reformat and Clumpify (10 October)
+https://clstacy.github.io/posts/2026/10/reformat-and-clumpify/
+
+**LinkedIn**
+
+Reformat is the BBTools utility I have trouble explaining until someone has needed it. Exact subsampling with the pairs kept in sync. Interleave, de-interleave, and a one-word check (vpair) that your files really are paired. Pull the unmapped reads out of a BAM in one command. Bin quality scores and shrink a FASTQ by 31% without touching a base.
+
+Clumpify does one odd thing, sorting reads so similar ones sit together, and gets three benefits from it: smaller files, faster downstream tools, and duplicate removal with no reference. I planted 2,000 duplicate pairs in the demo library; it found 4,002 at exact matching. The extra one was two genuine fragments with identical ends, which is the caveat every duplicate remover carries.
+
+**Short**
+
+Two BBTools utilities nobody writes about: Reformat (exact subsampling, interleaving, reads out of a BAM in one command) and Clumpify (smaller files, reference-free duplicate removal). Planted 2,000 duplicates, it found 4,002; the extra one is the lesson. https://clstacy.github.io/posts/2026/10/reformat-and-clumpify/
+
+---
+
+## BBTools in Nextflow (17 October)
+https://clstacy.github.io/posts/2026/10/bbtools-in-nextflow/
+
+**LinkedIn**
+
+The BBTools series ends with the pipeline: BBDuk, BBMap and BBMerge as five Nextflow processes, a samplesheet in and a results folder out, with one config file deciding whether it runs on a laptop, in a Biocontainers image, or on a SLURM cluster.
+
+It reproduces every number from the hand-run posts, which is the test a pipeline should pass before anyone else uses it. The post walks through one process line by line, shows what resume actually reruns when you change a step (only that step), and documents a gotcha that bit me: the results folder is a snapshot of the last run, not of the current code.
+
+All three files are downloadable, and the demo data script builds the input in seconds.
+
+**Short**
+
+BBDuk + BBMap + BBMerge as a small Nextflow pipeline: samplesheet in, results out, one config for laptop / container / SLURM, resume that reruns only what changed. Reproduces the hand-run numbers. Files included. https://clstacy.github.io/posts/2026/10/bbtools-in-nextflow/
+
+---
+
+## Worked example (11 November)
+https://clstacy.github.io/posts/2026/11/worked-example-honest-omics-model/
+
+**LinkedIn**
+
+I ran the whole classification-versus-prediction series on one public dataset: 286 breast tumours, 22,000 probes, 69 bone relapses (Wang et al. 2005, GSE2034).
+
+The popular pipeline (top 50 genes by t-test, logistic regression, one train/test split) reports an AUC of 0.89. Select the genes without looking at the test set and the same split gives 0.50. Across 200 honest splits it ranges from 0.45 to 0.72. Bootstrap the gene selection 200 times and no gene appears in more than 80% of the lists. The signature's out-of-fold probabilities are worse than predicting the prevalence for everyone.
+
+Ridge on all 5,000 filtered genes reaches an honest 0.71 and is calibrated. And the optimism-corrected bootstrap I recommended in the last post gave 0.94 for that model, against 0.71 from cross-validation. At 0.014 events per variable a model that memorises its training data breaks the standard bootstrap correction. The post explains why, shows which estimators survive, and corrects the earlier advice. Code and every number included.
+
+**Short**
+
+Ran the whole series on a public breast cancer cohort (286 tumours, 69 events). Popular pipeline says AUC 0.89; honest answer 0.59. Ridge on all genes: 0.71, calibrated. And the bootstrap I recommended failed at EPV 0.014. Code included. https://clstacy.github.io/posts/2026/11/worked-example-honest-omics-model/
+
+---
+
+## Let the classifier say "I don't know" (18 November)
+https://clstacy.github.io/posts/2026/11/let-the-classifier-say-i-dont-know/
+
+**LinkedIn**
+
+A DNA methylation tumour classifier can be 96% accurate and print "66% confident" on every call. The published score for one widely used tool is missing a single constant; fit it once and the calibration error falls from 0.31 to 0.007, with no diagnosis changed. That was my Tübingen poster.
+
+The Kraków poster asked the harder question: once the score is fixed, is a confident call equally trustworthy for every patient? In TCGA, which is 80% European ancestry, confident errors in stomach cancer were ten times more frequent for Asian-ancestry patients, and nearly six times more frequent in endometrioid uterine cancer for African-ancestry patients. The misclassified tumours genuinely resemble the cancer they were mistaken for; the model learned the boundary between look-alikes from one ancestry.
+
+The fix is not to refuse those patients an answer. It is to let the classifier return a short list with a per-group coverage guarantee. Written for the people who order the test rather than the people who build it.
+
+**Short**
+
+A tumour classifier that's 96% accurate and says "66% confident" every time; and, once fixed, confident errors 10x more frequent for Asian-ancestry stomach cancer patients. Why the answer is a short list with a guarantee, not a refusal. For clinicians. https://clstacy.github.io/posts/2026/11/let-the-classifier-say-i-dont-know/
