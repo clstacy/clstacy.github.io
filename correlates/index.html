@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Everything correlates with survival</title>
+<meta name="description" content="Pick any gene, or the weather in Dublin, and watch it split a survival curve. An interactive lesson in why a p-value from a gene search means nothing on its own.">
+<meta property="og:title" content="Everything correlates with survival">
+<meta property="og:description" content="Pick any gene, or the weather in Dublin, and watch it split a survival curve. Then shuffle the patients and watch it happen again.">
+<meta property="og:image" content="https://clstacy.github.io/correlates/preview.png">
+<style>
+  :root { --ink:#0b0b0b; --muted:#52514e; --line:#dddcd7; --bg:#fcfcfb; --blue:#2a78d6; --orange:#eb6834; --teal:#0f8f7e; --soft:#f1f1ee; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.45; }
+  .wrap { max-width:960px; margin:0 auto; padding:24px 16px 48px; }
+  h1 { font-size:1.8rem; margin:0 0 4px; letter-spacing:-0.015em; }
+  .sub { color:var(--muted); margin:0 0 18px; }
+  .panel { display:grid; grid-template-columns: 1fr; gap:16px; }
+  @media (min-width:800px) { .panel { grid-template-columns: 300px 1fr; } }
+  .controls { background:var(--soft); border-radius:10px; padding:14px; }
+  .controls label { display:block; font-size:0.8rem; color:var(--muted); margin:10px 0 4px; text-transform:uppercase; letter-spacing:0.04em; }
+  .controls input[type=text], .controls select { width:100%; padding:8px 10px; font-size:0.95rem; border:1px solid var(--line); border-radius:6px; background:#fff; }
+  .btn { display:inline-block; margin:6px 6px 0 0; padding:7px 11px; border-radius:6px; border:1px solid var(--line); background:#fff; cursor:pointer; font-size:0.9rem; color:var(--ink); }
+  .btn:hover { border-color:var(--teal); color:var(--teal); }
+  .btn.primary { background:var(--teal); border-color:var(--teal); color:#fff; }
+  .btn.primary:hover { background:#0c7566; color:#fff; }
+  .btn.danger { border-color:var(--orange); color:var(--orange); }
+  .btn.danger:hover { background:var(--orange); color:#fff; }
+  .toggle { display:flex; align-items:center; gap:8px; font-size:0.92rem; margin-top:10px; }
+  .result { padding:0 4px; }
+  .stat { display:flex; flex-wrap:wrap; gap:18px; margin:8px 0 6px; }
+  .stat div { min-width:110px; }
+  .stat .k { font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted); }
+  .stat .v { font-size:1.35rem; font-weight:700; letter-spacing:-0.01em; }
+  .stat .v.sig { color:var(--orange); }
+  .stat .v.ns { color:var(--teal); }
+  svg { width:100%; height:auto; display:block; }
+  .tally { margin-top:14px; padding:12px 14px; border-left:3px solid var(--orange); background:#fff7f3; border-radius:0 8px 8px 0; font-size:0.95rem; }
+  .tally b { color:var(--orange); }
+  .note { color:var(--muted); font-size:0.88rem; margin-top:14px; }
+  .hist { margin-top:10px; }
+  .foot { margin-top:28px; font-size:0.85rem; color:var(--muted); border-top:1px solid var(--line); padding-top:12px; }
+  .foot a { color:var(--teal); }
+  .title-line { font-weight:600; margin:2px 0 0; }
+  .shuffled { color:var(--orange); font-weight:600; }
+  #suggest { position:absolute; background:#fff; border:1px solid var(--line); border-radius:6px; max-height:180px; overflow:auto; width:270px; z-index:5; display:none; font-size:0.9rem; }
+  #suggest div { padding:5px 10px; cursor:pointer; }
+  #suggest div:hover { background:var(--soft); }
+  .rel { position:relative; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Everything correlates with survival</h1>
+  <p class="sub">198 breast cancer patients, 62 distant metastases, 3,014 genes and one weather station. Pick a predictor, split the patients at its median, and see how convincing the survival curves look. Then shuffle the patients and do it again.</p>
+
+  <div class="panel">
+    <div class="controls">
+      <label>Gene</label>
+      <div class="rel">
+        <input type="text" id="gene" placeholder="type a gene symbol, e.g. ESR1" autocomplete="off">
+        <div id="suggest"></div>
+      </div>
+      <button class="btn primary" id="btnRandom">Random gene</button>
+      <label>Something that is not a gene</label>
+      <select id="other">
+        <option value="">choose…</option>
+      </select>
+      <label>Cutpoint</label>
+      <div class="toggle"><input type="checkbox" id="optcut"><span>Search for the "optimal" cutpoint (10th–90th percentile) instead of the median</span></div>
+      <label>The experiment</label>
+      <button class="btn danger" id="btnShuffle">Shuffle the outcomes</button>
+      <button class="btn" id="btnReset">Restore real outcomes</button>
+      <label>Brute force</label>
+      <button class="btn" id="btn100">Try 100 random genes</button>
+      <button class="btn" id="btnBest">Best of 1,000</button>
+    </div>
+
+    <div class="result">
+      <div id="titleLine" class="title-line">Pick something.</div>
+      <div class="stat">
+        <div><div class="k">log-rank p</div><div class="v" id="pval">–</div></div>
+        <div><div class="k">hazard ratio</div><div class="v" id="hr">–</div></div>
+        <div><div class="k">high / low</div><div class="v" id="ns">–</div></div>
+        <div><div class="k">outcomes</div><div class="v" id="outcomeState">real</div></div>
+      </div>
+      <div id="chart"></div>
+      <div class="tally" id="tally">You have looked at <b>0</b> predictors. At p&nbsp;&lt;&nbsp;0.05, chance alone hands you a "significant" result about once every twenty tries.</div>
+      <div class="hist" id="hist"></div>
+      <div class="note" id="note"></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    Data: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE7390">GSE7390</a> (TRANSBIG, Desmedt et al. 2007), 198 lymph-node-negative, untreated breast cancers on Affymetrix HG-U133A; endpoint is distant-metastasis-free survival. Genes shown are the 3,000 most variable probes plus a few famous ones. Dublin temperatures are ERA5 reanalysis for Dublin Airport via Open-Meteo. Nothing here is a clinical claim about any gene; that is rather the point. Companion post: <a href="/posts/2026/10/everything-correlates-with-survival/">Everything correlates with survival</a>. Built by <a href="/">Carson Stacy</a>.
+  </div>
+</div>
+
+<script>
+// ---------- statistics ----------
+function kaplanMeier(t, e) {
+  // returns [[time, survival], ...] step points starting at (0,1)
+  const idx = [...t.keys()].sort((a, b) => t[a] - t[b]);
+  let n = t.length, s = 1, pts = [[0, 1]], i = 0;
+  while (i < idx.length) {
+    const ti = t[idx[i]]; let d = 0, c = 0;
+    while (i < idx.length && t[idx[i]] === ti) { if (e[idx[i]]) d++; else c++; i++; }
+    if (d > 0) { s *= (1 - d / n); pts.push([ti, s]); }
+    n -= d + c;
+  }
+  return pts;
+}
+function logrank(t, e, g) {
+  // g: 0/1 group. Returns {chi2, p, O1, E1, O0, E0, hr}
+  const idx = [...t.keys()].sort((a, b) => t[a] - t[b]);
+  let n1 = 0, n0 = 0; for (const k of idx) { if (g[k]) n1++; else n0++; }
+  let O1 = 0, E1 = 0, V = 0, O0 = 0, E0 = 0, i = 0;
+  while (i < idx.length) {
+    const ti = t[idx[i]]; let d1 = 0, d0 = 0, c1 = 0, c0 = 0;
+    while (i < idx.length && t[idx[i]] === ti) {
+      const k = idx[i]; if (e[k]) { if (g[k]) d1++; else d0++; } else { if (g[k]) c1++; else c0++; } i++;
+    }
+    const n = n1 + n0, d = d1 + d0;
+    if (d > 0 && n > 1) {
+      const e1 = d * n1 / n; E1 += e1; E0 += d - e1; O1 += d1; O0 += d0;
+      V += d * (n1 / n) * (n0 / n) * (n - d) / (n - 1);
+    }
+    n1 -= d1 + c1; n0 -= d0 + c0;
+  }
+  const chi2 = V > 0 ? (O1 - E1) ** 2 / V : 0;
+  const p = chi2p(chi2);
+  const hr = (E1 > 0 && E0 > 0 && O0 > 0) ? (O1 / E1) / (O0 / E0) : NaN;
+  return { chi2, p, O1, E1, O0, E0, hr };
+}
+function chi2p(x) { // 1 df: p = erfc(sqrt(x/2))
+  return erfc(Math.sqrt(x / 2));
+}
+function erfc(x) { // Numerical Recipes erfcc, |err| < 1.2e-7
+  const z = Math.abs(x), t = 1 / (1 + 0.5 * z);
+  const r = t * Math.exp(-z * z - 1.26551223 + t * (1.00002368 + t * (0.37409196 + t * (0.09678418 + t * (-0.18628806 + t * (0.27886807 + t * (-1.13520398 + t * (1.48851587 + t * (-0.82215223 + t * 0.17087277)))))))));
+  return x >= 0 ? r : 2 - r;
+}
+function quantile(arr, q) { const s = [...arr].sort((a, b) => a - b); const pos = (s.length - 1) * q, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
+// seeded RNG (mulberry32)
+function rng(seed) { let a = seed >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+// ---------- state ----------
+let D = null, expr = null, T = null, E = null, realT = null, realE = null, shuffled = false;
+let looked = 0, sigCount = 0, pvals = [];
+const rand = rng(20260923);
+
+function groupSplit(x, optimal) {
+  // returns {g, cut, label}
+  const valid = x.map((v, i) => v == null ? null : i).filter(i => i !== null);
+  if (!optimal) {
+    const med = quantile(valid.map(i => x[i]), 0.5);
+    let g = x.map(v => v == null ? null : (v > med ? 1 : 0));
+    if (!g.some(v => v === 1)) g = x.map(v => v == null ? null : (v >= med ? 1 : 0)); // binary predictors
+    return { g, cut: med, label: "median" };
+  }
+  // search cutpoints between the 10th and 90th percentile, keep the smallest p
+  const vals = [...new Set(valid.map(i => x[i]))].sort((a, b) => a - b);
+  const lo = quantile(valid.map(i => x[i]), 0.10), hi = quantile(valid.map(i => x[i]), 0.90);
+  let best = null;
+  for (const c of vals) {
+    if (c < lo || c > hi) continue;
+    const g = x.map(v => v == null ? null : (v > c ? 1 : 0));
+    const r = runLR(g);
+    if (!best || r.p < best.p) best = { p: r.p, cut: c, g };
+  }
+  return { g: best.g, cut: best.cut, label: "\"optimal\" cutpoint (best of " + vals.filter(c => c >= lo && c <= hi).length + " tried)" };
+}
+function runLR(g) {
+  const keep = g.map((v, i) => v == null ? null : i).filter(i => i !== null);
+  return logrank(keep.map(i => T[i]), keep.map(i => E[i]), keep.map(i => g[i]));
+}
+
+function show(name, x, kind) {
+  const optimal = document.getElementById("optcut").checked;
+  const { g, cut, label } = groupSplit(x, optimal);
+  const r = runLR(g);
+  looked++; pvals.push(r.p); if (r.p < 0.05) sigCount++;
+  const n1 = g.filter(v => v === 1).length, n0 = g.filter(v => v === 0).length;
+  document.getElementById("titleLine").innerHTML = `<span>${name}</span> <span style="color:var(--muted);font-weight:400">· split at the ${label}${shuffled ? " · <span class='shuffled'>outcomes shuffled</span>" : ""}</span>`;
+  const pv = document.getElementById("pval"); pv.textContent = fmtP(r.p); pv.className = "v " + (r.p < 0.05 ? "sig" : "ns");
+  document.getElementById("hr").textContent = isFinite(r.hr) ? r.hr.toFixed(2) : "–";
+  document.getElementById("ns").textContent = `${n1} / ${n0}`;
+  document.getElementById("outcomeState").innerHTML = shuffled ? "<span class='shuffled'>shuffled</span>" : "real";
+  drawKM(g, name);
+  document.getElementById("tally").innerHTML = `You have looked at <b>${looked}</b> predictor${looked === 1 ? "" : "s"} and found <b>${sigCount}</b> with p&nbsp;&lt;&nbsp;0.05. Chance alone would give about <b>${(looked * 0.05).toFixed(1)}</b>${optimal ? " at the median; the optimal-cutpoint search roughly triples that" : ""}.`;
+  const notes = {
+    gene: "This is one probe among 22,283 on the array. If you searched all of them at p < 0.05 you would expect about 1,100 \"significant\" genes with no biology behind them.",
+    clinical: "A real clinical variable, recorded before any array was run. In this cohort ER status separates the curves at a median split; grade, at a median split, does not, which is its own small lesson about coarse splits in a cohort of 198. Any gene signature should be asked what it adds beyond variables like these.",
+    nonsense: "Patient 1 was assigned the temperature on 1 January 1990, patient 2 the temperature on 2 January, and so on. Whatever this curve shows, it is not meteorology.",
+  };
+  document.getElementById("note").textContent = notes[kind] || "";
+}
+function fmtP(p) { return p < 0.0001 ? "< 0.0001" : p.toFixed(p < 0.01 ? 4 : 3); }
+
+function drawKM(g, name) {
+  const W = 640, H = 340, L = 48, R = 12, Tp = 16, B = 40;
+  const idx1 = [], idx0 = [];
+  g.forEach((v, i) => { if (v === 1) idx1.push(i); else if (v === 0) idx0.push(i); });
+  const km1 = kaplanMeier(idx1.map(i => T[i]), idx1.map(i => E[i]));
+  const km0 = kaplanMeier(idx0.map(i => T[i]), idx0.map(i => E[i]));
+  const tmax = Math.max(...T) * 1.02;
+  const xs = t => L + (t / tmax) * (W - L - R), ys = s => Tp + (1 - s) * (H - Tp - B);
+  function path(km, endT) {
+    let d = `M${xs(0)},${ys(1)}`; let last = 1;
+    for (const [t, s] of km) { d += ` H${xs(t)} V${ys(s)}`; last = s; }
+    d += ` H${xs(endT)}`; return d;
+  }
+  const end1 = Math.max(...idx1.map(i => T[i])), end0 = Math.max(...idx0.map(i => T[i]));
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Kaplan-Meier curves for ${name}">`;
+  for (const s of [0, 0.25, 0.5, 0.75, 1]) svg += `<line x1="${L}" x2="${W - R}" y1="${ys(s)}" y2="${ys(s)}" stroke="#e6e5e1" stroke-width="1"/><text x="${L - 6}" y="${ys(s) + 4}" text-anchor="end" font-size="11" fill="#52514e">${s.toFixed(2)}</text>`;
+  for (let yr = 0; yr <= tmax; yr += 5) svg += `<text x="${xs(yr)}" y="${H - B + 16}" text-anchor="middle" font-size="11" fill="#52514e">${yr}</text>`;
+  svg += `<text x="${(L + W - R) / 2}" y="${H - 6}" text-anchor="middle" font-size="12" fill="#0b0b0b">years since diagnosis</text>`;
+  svg += `<text transform="translate(12,${(Tp + H - B) / 2}) rotate(-90)" text-anchor="middle" font-size="12" fill="#0b0b0b">metastasis-free</text>`;
+  svg += `<path d="${path(km0, end0)}" fill="none" stroke="#2a78d6" stroke-width="2.2"/>`;
+  svg += `<path d="${path(km1, end1)}" fill="none" stroke="#eb6834" stroke-width="2.2"/>`;
+  const s0 = km0.length ? km0[km0.length - 1][1] : 1, s1 = km1.length ? km1[km1.length - 1][1] : 1;
+  svg += `<text x="${xs(end0) - 4}" y="${ys(s0) - 6}" text-anchor="end" font-size="11" fill="#2a78d6" font-weight="600">low</text>`;
+  svg += `<text x="${xs(end1) - 4}" y="${ys(s1) + 14}" text-anchor="end" font-size="11" fill="#eb6834" font-weight="600">high</text>`;
+  svg += `</svg>`;
+  document.getElementById("chart").innerHTML = svg;
+}
+
+function drawHist(ps, title) {
+  const W = 640, H = 120, L = 40, R = 12, Tp = 18, B = 26, nb = 20;
+  const counts = new Array(nb).fill(0); for (const p of ps) counts[Math.min(nb - 1, Math.floor(p * nb))]++;
+  const mx = Math.max(...counts, 1), bw = (W - L - R) / nb;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${title}"><text x="${W - R}" y="12" text-anchor="end" font-size="12" font-weight="600" fill="#0b0b0b">${title}</text>`;
+  counts.forEach((c, i) => { const h = c / mx * (H - Tp - B); svg += `<rect x="${L + i * bw + 1}" y="${H - B - h}" width="${bw - 2}" height="${h}" fill="${i === 0 ? "#eb6834" : "#2a78d6"}"/>`; });
+  for (const q of [0, 0.25, 0.5, 0.75, 1]) svg += `<text x="${L + q * (W - L - R)}" y="${H - 8}" text-anchor="middle" font-size="11" fill="#52514e">${q}</text>`;
+  svg += `<text x="${L + 0.5 * bw}" y="${H - B - 4 - counts[0] / mx * (H - Tp - B)}" text-anchor="middle" font-size="11" fill="#eb6834">${counts[0]} at p&lt;0.05</text></svg>`;
+  document.getElementById("hist").innerHTML = svg;
+}
+
+// ---------- data + wiring ----------
+function probe(i) { const n = D.n; return Array.from(expr.subarray(i * n, (i + 1) * n)); }
+function pickGene(i) { show(D.probe_labels[i], probe(i), "gene"); document.getElementById("gene").value = D.probe_labels[i].split(" (")[0]; }
+
+fetch("data.json").then(r => r.json()).then(d => {
+  D = d; realT = d.time_years; realE = d.event; T = realT; E = realE;
+  const bin = atob(d.expr_u8_base64); expr = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) expr[i] = bin.charCodeAt(i);
+  const sel = document.getElementById("other");
+  for (const k of Object.keys(d.clinical)) { const o = document.createElement("option"); o.value = "c:" + k; o.textContent = k; sel.appendChild(o); }
+  for (const k of Object.keys(d.nonsense)) { const o = document.createElement("option"); o.value = "n:" + k; o.textContent = k.split(",")[0]; sel.appendChild(o); }
+  sel.onchange = () => { const v = sel.value; if (!v) return; const [kind, key] = [v[0], v.slice(2)]; show(key, kind === "c" ? d.clinical[key] : d.nonsense[key], kind === "c" ? "clinical" : "nonsense"); };
+  // start on something honest
+  show("ER status (1 = positive)", d.clinical["ER status (1 = positive)"], "clinical"); looked = 0; sigCount = 0; pvals = [];
+  document.getElementById("tally").innerHTML = `You have looked at <b>0</b> predictors. At p&nbsp;&lt;&nbsp;0.05, chance alone hands you a "significant" result about once every twenty tries.`;
+});
+
+const geneBox = document.getElementById("gene"), sug = document.getElementById("suggest");
+geneBox.oninput = () => {
+  const q = geneBox.value.trim().toUpperCase(); sug.innerHTML = ""; if (!q || !D) { sug.style.display = "none"; return; }
+  const hits = []; for (let i = 0; i < D.probe_labels.length && hits.length < 12; i++) if (D.probe_labels[i].toUpperCase().startsWith(q)) hits.push(i);
+  if (!hits.length) { sug.style.display = "none"; return; }
+  for (const i of hits) { const div = document.createElement("div"); div.textContent = D.probe_labels[i]; div.onclick = () => { sug.style.display = "none"; pickGene(i); }; sug.appendChild(div); }
+  sug.style.display = "block";
+};
+geneBox.onkeydown = ev => { if (ev.key === "Enter" && sug.firstChild) sug.firstChild.click(); };
+document.addEventListener("click", ev => { if (!sug.contains(ev.target) && ev.target !== geneBox) sug.style.display = "none"; });
+document.getElementById("btnRandom").onclick = () => pickGene(Math.floor(rand() * D.n_probes));
+document.getElementById("btnShuffle").onclick = () => {
+  const idx = [...realT.keys()]; for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(rand() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
+  T = idx.map(i => realT[i]); E = idx.map(i => realE[i]); shuffled = true; rerun();
+};
+document.getElementById("btnReset").onclick = () => { T = realT; E = realE; shuffled = false; rerun(); };
+document.getElementById("optcut").onchange = rerun;
+let lastShown = null;
+const _show = show; show = function (name, x, kind) { lastShown = [name, x, kind]; _show(name, x, kind); };
+function rerun() { if (lastShown) { looked--; if (pvals.length) { const p = pvals.pop(); if (p < 0.05) sigCount--; } show(...lastShown); } }
+document.getElementById("btn100").onclick = () => {
+  const optimal = document.getElementById("optcut").checked; const ps = [];
+  for (let k = 0; k < 100; k++) { const i = Math.floor(rand() * D.n_probes); const { g } = groupSplit(probe(i), optimal); ps.push(runLR(g).p); }
+  looked += 100; const s = ps.filter(p => p < 0.05).length; sigCount += s; pvals.push(...ps);
+  drawHist(ps, `p-values of 100 random genes (${optimal ? "optimal cutpoint" : "median split"}${shuffled ? ", outcomes shuffled" : ""}): ${s} below 0.05`);
+  document.getElementById("tally").innerHTML = `You have looked at <b>${looked}</b> predictors and found <b>${sigCount}</b> with p&nbsp;&lt;&nbsp;0.05. Chance alone would give about <b>${(looked * 0.05).toFixed(1)}</b> at the median split.`;
+};
+document.getElementById("btnBest").onclick = () => {
+  const optimal = document.getElementById("optcut").checked; let best = null;
+  let s = 0;
+  for (let k = 0; k < 1000; k++) { const i = Math.floor(rand() * D.n_probes); const { g } = groupSplit(probe(i), optimal); const p = runLR(g).p; if (p < 0.05) s++; pvals.push(p); if (!best || p < best.p) best = { p, i }; }
+  looked += 999; sigCount += s - (best.p < 0.05 ? 1 : 0); pvals.pop(); pickGene(best.i);
+  document.getElementById("note").textContent = `This is the single best of 1,000 random genes. Its p-value is what a search over 1,000 candidates produces even when none of them matters. The fair correction is to multiply by the number you looked at.`;
+};
+</script>
+</body>
+</html>
