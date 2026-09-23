@@ -9,135 +9,150 @@ redirect_from:
 
 {% include base_path %}
 
-# **Carson Stacy**
-
-**Ph.D. Candidate – Cell & Molecular Biology** | **M.S. Student – Statistics**  
-University of Arkansas, Fayetteville, AR  
-
-Email: contact@carsonstacy.com  
-Springdale, AR  
-[https://clstacy.github.io](https://clstacy.github.io)
+**Postdoctoral Research Fellow** | Royal College of Surgeons in Ireland, Dublin
+[clstacy.github.io](https://clstacy.github.io) | [orcid.org/0000-0002-8817-574X](https://orcid.org/0000-0002-8817-574X) | [linkedin.com/in/carson-stacy](https://linkedin.com/in/carson-stacy)
 
 ---
 
-## **Professional Summary**
+## Professional Experience
 
-I am a Ph.D. candidate in Cell & Molecular Biology and an M.S. student in Statistics with hands-on experience in building reproducible data analysis pipelines and applying statistical methodologies to complex biological datasets. My doctoral research focuses on identifying genomic determinants of stress tolerance, from yeast models to broader applications. I’m passionate about leveraging advanced statistical techniques to deliver practical, timely solutions to novel biological questions.
+**Postdoctoral Research Fellow** — Jan 2026 – Present
+Royal College of Surgeons in Ireland (RCSI), Dublin, Ireland
+*School of Pharmacy & Biomolecular Sciences, Das Lab*
 
----
-
-## **Education**
-
-**University of Arkansas** — Fayetteville, AR  
-- **Ph.D. in Cell & Molecular Biology** (Expected December 2025)  
-  *Dissertation: “Genomic determinants for natural variation in stress tolerance”*
-
-- **M.S. in Statistics & Analytics** (Concentration: Statistics) (Expected May 2025)  
-  *Thesis: “Analysis of ordinal data in genomic and molecular experiments”*
-
-**University of Arkansas** — Fayetteville, AR  
-- **B.S. in Anthropology** (Minor: Biology), May 2017  
-  *Magna cum laude, GPA 4.0*
+- Develop and validate DNA methylation-based machine-learning classifiers for rare sinonasal tumors, including metastasis prediction.
+- Integrate bulk methylation with single-cell data (scRNA-seq, scATAC-seq) and histology (whole-slide imaging) to improve tumor microenvironment deconvolution and interpretability.
+- Mentor a work-study student in the Precision Medicine program on histology whole-slide image segmentation for cancer subtype prediction.
 
 ---
 
-## **Professional Experience**
+## Education
 
-### **Graduate Research Assistant**  
-**Lewis Lab, University of Arkansas – Fayetteville, AR**  
-*January 2020 – Present*  
-- **Pipeline Innovation:** Spearheaded a novel analysis pipeline for CRISPR screens of pan-genomic libraries in wild yeast. Integrated ordinal logistic regression into phenotype analyses, contributing to a high-impact publication.  
-- **Big Data Management:** Analyzed 200+ RNA-seq samples using a reproducible Nextflow pipeline; improved gene set enrichment analysis (GSEA) visualizations with a custom R package; utilized regularized regression to identify phenotype-associated genes.  
-- **Educational Impact:** Served as a Teaching Assistant for five semesters (avg. student evaluation score of 4.8/5). Co-designed an interactive Genomic Data Analysis course, boosting student learning outcomes.
+**Ph.D. in Cell and Molecular Biology** — University of Arkansas, December 2025
+Concentration: Bioinformatics | GPA 4.0/4.0
+*Dissertation: Phenotypic Association of Pan-Genomic Transcriptional Signatures Reveal Genomic Determinants of Natural Variation in Stress Response and Survival. Advisor: Jeffrey Lewis.*
 
-### **Laboratory Technician**  
-**Ceballos Lab, University of Arkansas – Fayetteville, AR**  
-*August 2019 – January 2020*  
-- **Model Development:** Applied weighted phenotype analysis to quantify virus-induced changes in neuronal signaling, leading to two co-authored research publications.  
-- **Process Optimization:** Authored and maintained a comprehensive SOP for FPLC operations, streamlining ion exchange and size exclusion protocols.  
-- **Innovation:** Developed a neuron-tracing algorithm for detecting changes in signaling kinetics post-viral infection.
+**M.S. in Statistics and Analytics** — University of Arkansas, May 2025
+Concentration: Statistics | GPA 3.9/4.0
+*Thesis: Application of Ordinal Regression Models to Acquired Stress Resistance in Wild Strains of Saccharomyces cerevisiae. Advisor: Qingyang Zhang.*
 
-### **High School Chemistry Teacher (Peace Corps Volunteer)**  
-**Kolahun, Lofa County, Liberia**  
-*May 2017 – October 2018*  
-- **Curriculum Development:** Designed culturally responsive STEM curricula for grades 10–12, engaging 1,200+ students in interactive lab activities.  
-- **Capacity Building:** Organized teacher training workshops to foster modern pedagogical strategies, serving as the only chemistry teacher in town.  
-- **Community Engagement:** Co-led the Girls Club of Kolahun, encouraging science education and community involvement.
-
-### **Supplemental Instruction Leader (Chemistry)**  
-**CLASS+, University of Arkansas – Fayetteville, AR**  
-*January 2014 – May 2017*  
-- **Instructional Excellence:** Guided small-group tutoring sessions and interactive drills to enhance first-year chemistry comprehension.  
-- **Mentorship:** Designed lesson plans and mentored new SI leaders, creating a supportive, peer-driven learning environment.
+**B.S. in Anthropology** — University of Arkansas, May 2017
+Minor: Biological Sciences | GPA 4.0/4.0
 
 ---
 
-## **Projects & Open Source Contributions**
+## Research Interests
 
-- **Sinhala & Cherokee Alphabet Learning Apps (2025)**  
-  Developed in-browser JavaScript/HTML applications to aid learners of the Sinhala and Cherokee alphabets.  
-  - [Sinhala Alphabet App](https://clstacy.github.io/sinhala)  
-  - [Cherokee Alphabet App](https://clstacy.github.io/cherokee)
-
-- **R Shiny App for Automated Grading (2024)**  
-  Created an automated grading tool for peer evaluation scores, saving ~100 hours each semester.  
-  - [Demo](https://clstacy.shinyapps.io/Phys_Peer_Eval_Calc_2024_Spring/)
-
-- **`Paralogs` R Package (2024)**  
-  Developed an R package to display paralog expression patterns on KEGG pathway visualizations.  
-  - [GitHub Repo](https://github.com/clstacy/Paralogs)
-
-- **Genomic Data Analysis Course (2023 & 2025)**  
-  Created interactive exercises and served as TA, teaching bioinformatics techniques to graduate students.  
-  - [Curriculum](http://clstacy.github.io/GenomicDataAnalysis)
-
-- **Yeast Gene Knockout Doubling Time Repository Web App (2022)**  
-  Built an interactive tool to reference the doubling times of yeast knockout strains.  
-  - [Web App](https://clstacy.github.io/yeastKODoublingTimes/)
-
-- **R Package for Weighted Spectral Difference (2021)**  
-  Published a package analyzing Far UV Circular Dichroism data across temperature gradients for reproducible research.  
-  - [GitHub Repo](https://github.com/clstacy/WeightedSpectralDifference)
+I develop and apply statistical models and machine-learning methods to make sense of high-dimensional biological data, with an emphasis on interpretability and reproducibility. My methodological interests include ordinal and multinomial regression, regularized and hierarchical models, and predictive modeling for genomic and epigenomic data. Building on my experience integrating CRISPR screens with large-scale transcriptomic data in *Saccharomyces cerevisiae*, I now apply these approaches to identify biomarkers of disease progression and resilience — integrating DNA methylation, histone modifications, and scATAC-seq to predict metastasis in rare sinonasal cancers — with the broader goal of turning complex data into decisions that inform precision medicine.
 
 ---
 
-## **Technical Skills**
+## Publications
 
-- **Programming & Software**  
-  - Proficient: R (tidyverse, Shiny), Python, Unix/Bash, Git/GitHub, SLURM/HPC, ggplot2  
-  - Familiar: SAS, SQL, scikit-learn, caret, Nextflow (Groovy)
+**Accepted**
 
-- **Bioinformatics & Data Analysis**  
-  - RNA-seq, CRISPR screen analysis, NGS pipeline development, flow cytometry, Mass Spec  
-  - Ordinal regression, Bayesian & frequentist statistics, experimental design, phenotype correlation
+Sauer, E. L.<sup>†</sup>, **Stacy, C. L.**<sup>†</sup>, Perrine, W., Love, A. C., Lewis, J. A., & DuRant, S. E. (2025). Diet driven differences in host tolerance are linked to shifts in global gene expression in a common avian host-pathogen system. *Molecular Ecology*, 34(12), e17793. <sup>†</sup>Co-first author.
 
----
+VanDyke, L., Mantooth, R., **Stacy, C. L.**, Robinson, S., Fischer, P., Mosley, C., Beauford, H. and Jensen, H., 2025. Bicycle-Related Trauma Trends in a Region of Expanding Cycling Infrastructure. *The American Surgeon*.
 
-## **Honors & Awards**
+Scholes, A. N., Stuecker, T. N., Hood, S. E., Locke, C. J., **Stacy, C. L.**, Zhang, Q., & Lewis, J. A. (2024). Natural variation in yeast reveals multiple paths for acquiring higher stress resistance. *BMC Biology*, 22(1), 149.
 
-- **Delbert Swartz Endowed Graduate Fellowship**, University of Arkansas (2024)  
-- **Distinguished Doctoral Fellowship**, University of Arkansas (2020–2024)  
-- **Ford Foundation Predoctoral Fellowship** – Honorable Mention (2021)  
-- **Phi Beta Kappa** (Inducted Spring 2017)  
-- **Alpha Epsilon Delta** – Volunteer Coordinator (2015)
+Furr, M., Badiee, S. A., Basha, S., Agrawal, S., Alraawi, Z., Heng, S., **Stacy, C. L.**, Ahmed, Y., Moradi, M., Kumar, T. K. S., & Ceballos, R. M. (2024). Structural stability comparisons between natural and engineered group II chaperonins. *Microorganisms*, 12(11), 2348.
 
----
+Ceballos, R. M., & **Stacy, C. L.** (2021). Quantifying relative virulence: when μmax fails and AUC alone just is not enough. *Journal of General Virology*, 102(1), 001515.
 
-## **Additional Information**
+Ceballos, R. M., Drummond, C. G., **Stacy, C. L.**, Padilla-Crespo, E., & Stedman, K. M. (2020). Host-dependent differences in replication strategy of the *Sulfolobus* spindle-shaped virus strain SSV9 (aka, SSVK1). *Frontiers in Microbiology*, 11, 1218.
 
-- **Professional Memberships**  
-  - American Statistical Association  
-  - Graduate Student Congress Representative & Facilities Chair, Cell & Molecular Biology (2022–2024)
+**Submitted**
 
-- For a list of **publications** and **talks**, please visit the [Publications](#) and [Talks](#) sections on my website.
+**Stacy, C. L.**, Lenaduwe, S. L., Stuecker, T. N., Lewis, J. A. Biologically Scaled Thresholds from Proportional Odds Models Enhance Ordinal Phenotype Analysis. *mSystems*, under review.
+
+**In Preparation**
+
+**Stacy, C. L.**, Scholes, A. N., Stuecker, T. N., Hood, S. E., Crook, C. C., Espana-Pena, M., Pitts, L. J., Pare, A. C., Lewis, J. A. Not just Salt: Novel Functions of Hog1 MAPK Revealed through Stress Response Transcriptomics of Wild *Saccharomyces cerevisiae*.
+
+**Stacy, C. L.**, Hood, S.E., Stuecker, T. N., Sadhu, M. J., Lewis, J. A. A Plasmid-Based CRISPR Screen Identifies Novel Pan-Genomic Loci Conferring Strain-Specific Resistance to Osmotic Stress.
 
 ---
 
-_Last Updated: February 2025_
+## Conferences
 
+**Stacy, C. L.**, & Lewis, J. A. (2025). Interpretable Ordinal Analysis for Complex Designs in Cell and Molecular Biology. *Joint Statistical Meetings*, Nashville, TN.
 
-<!-- Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>  --> 
+Zhao, K., **Stacy, C. L.**, Islam, M. A., Robinson, S. E., Jensen, H. (2025). Mental Health, Psychotherapeutics, and Breast Cancer. *Arkansas Chapter of the American College of Physicians Conference*, Little Rock, AR.
+
+**Stacy, C. L.**, & Lewis, J. A. (2024). Paralogs: An R Package for Visualizing Differential Expression of Paralogs in KEGG Pathways. *KU Center for Genomics Annual Symposium*, Lawrence, KS.
+
+**Stacy, C. L.**, Lee, D. E., Brown, J. L., Rosa, M. E., Henry, J. N., Brown, L. A., Perry, R. E. Jr., Washington, T. A., & Greene, N. P. (2014). Effect of Lifestyle Physical Activity and Western Diet on Genes Controlling Mitochondrial Translation. *International Journal of Exercise Science: Conference Proceedings*, 11(2).
+
+---
+
+## Teaching Experience
+
+**Teaching Assistant** — Genomic Data Analysis (Graduate), University of Arkansas — Sp 2023 – Sp 2025
+Co-developed and TA'd a graduate-level bioinformatics course covering high-throughput sequencing analysis. [Course materials](https://clstacy.github.io/GenomicDataAnalysis)
+
+**Teaching Assistant** — Human Physiology Laboratory (Undergraduate), University of Arkansas — Sp 2024 – Fa 2024
+Instructed weekly lab sessions and developed an R Shiny automated grading calculator to reduce TA workload.
+
+**Teaching Assistant** — Principles of Biology Laboratory (Undergraduate), University of Arkansas — Fa 2022 – Sp 2023
+Led foundational biology labs for non-science majors. Average student evaluation score ~4.8/5.
+
+**General Chemistry Teacher (Peace Corps Volunteer)** — Kolahun High School, Liberia — May 2017 – Sept 2018
+Taught chemistry to grades 10–12 in a resource-limited setting. Developed culturally responsive curriculum, improved national exam pass rates, co-led the Girls Club of Kolahun, and served on the Gender Equity Committee.
+
+**Supplemental Instruction Leader** — Honors General Chemistry, University of Arkansas — Sp 2015 – Sp 2017
+Facilitated peer-led review sessions, trained new SI leaders, and developed active learning workshops.
+
+---
+
+## Open-Source Software
+
+- **[Paralogs](https://github.com/clstacy/Paralogs)** — R package for visualizing paralog expression in KEGG pathways
+- **[MultipoolR](https://github.com/clstacy/MultipoolR)** — R port of Multipool for bulk segregant data analysis
+- **[WeightedSpectralDifference](https://github.com/clstacy/WeightedSpectralDifference)** — R package for far UV circular dichroism analysis
+- **[Yeast KO Doubling Times](https://clstacy.github.io/yeastKODoublingTimes/)** — Interactive database of yeast knockout strain doubling times
+- **[Stress Assay Scoring App](https://clstacy.github.io/StressAssayScoring)** — Blinded image scoring app with preprocessing features
+- **[Genomic Data Analysis Course](https://clstacy.github.io/GenomicDataAnalysis)** — Interactive bioinformatics curriculum
+
+---
+
+## Skills
+
+**Programming & Software**
+R (tidyverse, Shiny, tidymodels), Python (pandas, NumPy, Keras, scikit-learn), Unix/Bash, Nextflow (Groovy), Git/GitHub, SLURM/PBS
+*Familiar: SQL, SAS, TensorFlow, PyTorch, JavaScript*
+
+**Bioinformatics**
+Bulk RNA-seq, CRISPR screen design & analysis, NGS pipeline development (short & long read), DNA methylation analysis, scRNA-seq, scATAC-seq, flow cytometry, mass spectrometry proteomics
+
+**Statistics & Machine Learning**
+Ordinal & multinomial regression, regularized regression, random forest, Bayesian hierarchical modeling, MCMC, experimental design & power analysis
+
+**Computing**
+HPC (SLURM & PBS), reproducible research (R Markdown, Quarto, Nextflow CI/CD), data visualization (ggplot2)
+
+---
+
+## Awards & Honors
+
+- **Delbert Swartz Endowed Graduate Fellowship** — University of Arkansas (2024)
+- **Distinguished Doctoral Fellow** — University of Arkansas (2020–2024)
+- **Ford Foundation Predoctoral Fellowship** — Honorable Mention (2021)
+- **Phi Beta Kappa** — Inducted Spring 2017
+- **Chancellor's List & Scholarship** (8×) — University of Arkansas (2017)
+- **Octa Norma High Scholarship** — University of Arkansas (2015)
+- **Cherokee Nation Valedictorian Scholarship** (2013)
+
+---
+
+## Service & Leadership
+
+- Elected **Facilities Chair & Representative**, Graduate-Professional Student Congress, University of Arkansas (2023–2024)
+- Elected **Graduate Student Congress Representative**, Cell & Molecular Biology, University of Arkansas (2022–2024)
+- Member, **American Statistical Association**
+- Elected **Volunteer Coordinator**, Alpha Epsilon Delta honor society (2015)
+
+---
+
+*Last updated: September 2026*

@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Carson Stacy"
 title_separator          : "-"
 name                     : &name "Carson Stacy"
-description              : &description "Researcher in bioinformatics, cancer genetics, and statistical modeling"
+description              : &description "Statistician and computational biologist working on statistical modeling, machine learning, and reproducible data analysis for genomics"
 url                      : https://clstacy.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "clstacy/clstacy.github.io"
@@ -50,7 +50,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification :
+google_site_verification : "h533cSC0u86u-Pgl1ehle26EZ8JPhRbbC7bjc6qYLOk"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -62,7 +62,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "/images/profile_pic.png" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -73,18 +73,19 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "google-gtag" (GA4), "custom"
   google:
-    tracking_id          : <meta name="google-site-verification" content="h533cSC0u86u-Pgl1ehle26EZ8JPhRbbC7bjc6qYLOk" />
+    tracking_id          : # GA4 Measurement ID, e.g. "G-XXXXXXXXXX"
+    anonymize_ip         : true
 
 
 # Site Author
 author:
   name             : "Carson Stacy"
   avatar           : "profile_pic.png"
-  bio              : "Graduate Student at the University of Arkansas | Applied Statistician | Practical Solutions Through Precise Analysis."
-  location         : "Fayetteville, AR"
-  employer         : "University of Arkansas"
+  bio              : "Postdoctoral Research Fellow at RCSI, Dublin. Statistical modeling, machine learning, and reproducible data analysis for genomics."
+  location         : "Dublin, Ireland"
+  employer         : "Royal College of Surgeons in Ireland"
   googlescholar    : "https://scholar.google.com/citations?user=zdeq1mYAAAAJ&hl=en"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
@@ -99,9 +100,9 @@ author:
   google_plus      :
   keybase          :
   instagram        :
+  linkedin         : "carson-stacy"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
   orcid            : "https://orcid.org/0000-0002-8817-574X"
   pinterest        :
   soundcloud       :
