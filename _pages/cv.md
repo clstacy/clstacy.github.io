@@ -69,7 +69,7 @@ Ceballos, R. M., Drummond, C. G., **Stacy, C. L.**, Padilla-Crespo, E., & Stedma
 
 **Stacy, C. L.**, Scholes, A. N., Stuecker, T. N., Hood, S. E., Crook, C. C., Espana-Pena, M., Paré, A. C., & Lewis, J. A. (2025). Surprising regulatory plasticity for the conserved HOG pathway in diverse *Saccharomyces cerevisiae* strains. *bioRxiv*. doi:10.64898/2025.12.28.696518
 
-**Stacy, C. L.**, Lenaduwe, S., Stuecker, T. N., & Lewis, J. A. (2025). MIC*: A framework for interpretable analysis of ordinal viability data. *bioRxiv*. doi:10.1101/2025.10.13.682067. Under review.
+**Stacy, C. L.**, Lenaduwe, S., Stuecker, T. N., & Lewis, J. A. (2025). MIC*: A framework for interpretable analysis of ordinal viability data. *bioRxiv*. doi:10.1101/2025.10.13.682067
 
 **In Preparation**  
 
