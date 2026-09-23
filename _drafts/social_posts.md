@@ -202,7 +202,7 @@ Clumpify does one odd thing, sorting reads so similar ones sit together, and get
 
 **Short**
 
-Two BBTools utilities nobody writes about: Reformat (exact subsampling, interleaving, reads out of a BAM in one command) and Clumpify (smaller files, reference-free duplicate removal). Planted 2,000 duplicates, it found 4,002; the extra one is the lesson. https://clstacy.github.io/posts/2026/10/reformat-and-clumpify/
+Two BBTools utilities nobody writes about: Reformat (exact subsampling, interleaving, reads out of a BAM) and Clumpify (smaller files, reference-free dedup). Planted 2,000 duplicates; it found 4,002. The extra one is the lesson. https://clstacy.github.io/posts/2026/10/reformat-and-clumpify/
 
 ---
 
@@ -236,7 +236,7 @@ Ridge on all 5,000 filtered genes reaches an honest 0.71 and is calibrated. And 
 
 **Short**
 
-Ran the whole series on a public breast cancer cohort (286 tumours, 69 events). Popular pipeline says AUC 0.89; honest answer 0.59. Ridge on all genes: 0.71, calibrated. And the bootstrap I recommended failed at EPV 0.014. Code included. https://clstacy.github.io/posts/2026/11/worked-example-honest-omics-model/
+The whole series on one public cohort (286 tumours, 69 events). Popular pipeline: AUC 0.89. Honest: 0.59. Ridge on all genes: 0.71, calibrated. And the bootstrap I recommended failed at EPV 0.014. Code included. https://clstacy.github.io/posts/2026/11/worked-example-honest-omics-model/
 
 ---
 
@@ -253,4 +253,4 @@ The fix is not to refuse those patients an answer. It is to let the classifier r
 
 **Short**
 
-A tumour classifier that's 96% accurate and says "66% confident" every time; and, once fixed, confident errors 10x more frequent for Asian-ancestry stomach cancer patients. Why the answer is a short list with a guarantee, not a refusal. For clinicians. https://clstacy.github.io/posts/2026/11/let-the-classifier-say-i-dont-know/
+A tumour classifier 96% accurate that says "66% confident" every time; once fixed, confident errors 10x more frequent for Asian-ancestry stomach cancer patients. Why the answer is a short list with a guarantee. https://clstacy.github.io/posts/2026/11/let-the-classifier-say-i-dont-know/
