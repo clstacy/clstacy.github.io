@@ -54,7 +54,7 @@ Installation is simple. BBTools runs on Java, so it works across platforms witho
 Or if you prefer to install in a conda environment:
 
 ``` bash
-conda install -c bioconda bbtools
+conda install -c bioconda bbmap
 ```
 
 Run any tool with no arguments to see usage. Java is almost certainly something you already have, and the suite works from a laptop to an HPC with minimal reconfiguration. I prototype locally and run production jobs on HPC systems all the time and have had a great experience.

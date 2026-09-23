@@ -1,0 +1,110 @@
+{
+ "n": 286,
+ "p_total": 22215,
+ "events": 69,
+ "prevalence": 0.2413,
+ "EPV_all_probes": 0.0031,
+ "p_after_variance_filter": 5000,
+ "EPV_after_filter": 0.0138,
+ "brier_null": 0.1831,
+ "A1_leaky_single_split_AUC": 0.753,
+ "A2_clean_single_split_AUC": 0.503,
+ "A3_apparent_AUC_top50": 0.889,
+ "A4_leaky_splits": {
+  "mean": 0.727,
+  "sd": 0.051,
+  "p5": 0.645,
+  "p95": 0.811
+ },
+ "A4_clean_splits": {
+  "mean": 0.586,
+  "sd": 0.058,
+  "p5": 0.486,
+  "p95": 0.678,
+  "min": 0.45,
+  "max": 0.716
+ },
+ "B_bootstrap_lists": 200,
+ "B_median_pairwise_jaccard": 0.099,
+ "B_mean_overlap_with_full_list": 18.5,
+ "B_n_probes_ever_selected": 1140,
+ "B_n_probes_selected_in_50pct_of_bootstraps": 7,
+ "B_n_probes_selected_in_80pct_of_bootstraps": 0,
+ "B_top_probe_frequencies": [
+  [
+   "211868_x_at",
+   0.76
+  ],
+  [
+   "216984_x_at",
+   0.68
+  ],
+  [
+   "216365_x_at",
+   0.64
+  ],
+  [
+   "214777_at",
+   0.62
+  ],
+  [
+   "216207_x_at",
+   0.59
+  ],
+  [
+   "217148_x_at",
+   0.57
+  ],
+  [
+   "211637_x_at",
+   0.57
+  ],
+  [
+   "211908_x_at",
+   0.48
+  ],
+  [
+   "217378_x_at",
+   0.46
+  ],
+  [
+   "214858_at",
+   0.45
+  ]
+ ],
+ "C_chosen_C": 0.001,
+ "C_apparent_AUC": 1.0,
+ "C_apparent_Brier": 0.0498,
+ "C_bootstraps": 200,
+ "C_optimism_AUC": 0.057,
+ "C_corrected_AUC": 0.943,
+ "C_optimism_Brier": -0.0644,
+ "C_corrected_Brier": 0.1142,
+ "C_corrected_calibration_slope": 1.196,
+ "C_oob_bootstrap_AUC": 0.713,
+ "C_632plus_AUC": 0.77,
+ "C_repeatedCV_AUC_mean": 0.712,
+ "C_repeatedCV_AUC_sd": 0.016,
+ "C_oof_Brier": 0.1632,
+ "C_oof_logloss": 0.4988,
+ "C_oof_calibration_slope": 1.256,
+ "C_oof_calibration_intercept": 0.409,
+ "C_oof_pred_range": [
+  0.035,
+  0.637
+ ],
+ "D_sig_apparent_AUC": 0.889,
+ "D_sig_optimism_AUC": 0.148,
+ "D_sig_corrected_AUC": 0.741,
+ "D_sig_corrected_calibration_slope": 0.44,
+ "D_sig_oob_bootstrap_AUC": 0.591,
+ "D_sig_632plus_AUC": 0.627,
+ "D_sig_oof_AUC": 0.595,
+ "D_sig_oof_Brier": 0.2016,
+ "D_sig_oof_calibration_slope": 0.239,
+ "D_sig_oof_pred_range": [
+  0.001,
+  0.853
+ ],
+ "runtime_s": 384
+}
